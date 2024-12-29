@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta tags for character encoding and responsive design -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Title of the webpage -->
+    <title>IRCTC</title>
+
+    <!-- Favicon for the page -->
+    <link rel="icon" type="image" href="icon.png" />
+
+    <!-- Google Fonts (Montserrat and Roboto) for custom font styles -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Linking the external CSS file -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header section containing the navigation bar -->
+    <header>
+      <nav>
+        <!-- Menu button for mobile navigation (SVG icon) -->
+        <div class="menu_button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="30"
+            height="30"
+            fill="currentColor"
+            class="bi_bi_list"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+            />
+          </svg>
+        </div>
+        <!-- IRCTC logo -->
+        <div class="train_logo">
+          <img src="irctc_logo.webp" alt="IRCTC Logo" />
+        </div>
+        <!-- Navigation links inside header -->
+        <div class="header_content">
+          <div class="nav_links">
+            <a href="#home">Meals</a>
+            <a href="#about">Track Your Train</a>
+            <a href="#services">PNR Status</a>
+            <a href="#contact">Charts/Vacancy</a>
+          </div>
+        </div>
+        <!-- Login button -->
+        <button class="log">Login</button>
+      </nav>
+      <br />
+    </header>
+    <!-- Main content of the page -->
+    <div class="mainpage">
+      <!-- Background video -->
+      <video autoplay muted loop width="100%">
+        <source src="cine.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <!-- Searchbox section for booking tickets -->
+      <div class="searchbox" style="position: relative">
+        <!-- Text to indicate the section is for booking tickets -->
+        <div class="bookt">BOOK TICKET</div>
+        <!-- Form section for entering ticket details -->
+        <div class="forms" style="margin-bottom: 40px;">
+          <div class="form1">
+            <!-- Input fields for ticket booking (e.g., train details) -->
+            <input id="from" type="text" class="formq1" />
+            <!-- Icon container for a button or icon (used for toggling) -->
+            <div class="icon-container">
+              <!-- Hidden checkbox used to toggle the icon image -->
+              <input type="checkbox" style="display: none" id="toggleImage" />
+              <label for="toggleImage" class = "lbl">
+                <!-- Exchange icon -->
+                <img src="exchange.png" class="exchange" />
+              </label>
+            </div>
+            <!-- Another input field for the second part of the form -->
+            <input id = "to"type="text" class="formq11" />
+            <br />
+            <select name="pets" id="quota-select" >
+              <option value="" selected disabled style="font-family: roboto">QUOTA</option>
+              <option value="general">GENERAL</option>
+              <option value="ladies">LADIES</option>
+              <option value="lower-berth">LOWER BERTH/SR. CITIZEN</option>
+              <option value="pwd">PERSON WITH DISABILITY</option>
+              <option value="duty-pass">DUTY PASS</option>
+              <option value="tatkal">TATKAL</option>
+              <option value="premium-tatkal">PREMIUM TATKAL</option>
+            </select>
+          </div>
+          <!-- Another form section (e.g., second set of ticket details) -->
+          <div class="form2">
+            <form>
+              <input id = "date" type="text" class="formq1" />
+              <br />
+              <input id="class" type="text" class="formq" />
+            </form>
+          </div>
+          <br/>
+        </div>
+        <div class="searcb" style="width: auto;display: flex; justify-content: center;">
+          <button id = "Save_button"style="width: 70%; height: 40px; font-size: 15px; background-color: #e43900;outline: solid 2px #e43900;border: none; border-radius: 5px; color: white;font-weight: 700;">Search</button>
+          </div>
+      </div>
+    </div>
+    <br />
+    <button>hi</button>
+    <script>
+      document.getElementById('Save_button').addEventListener('click',function(){
+        const from = document.getElementById('from').value;
+        const to = document.getElementById('to').value;
+        const date = document.getElementById('date').value;
+        const clas = document.getElementById('class').value;
+        const quota = document.getElementById('quota-select').value;
+        if(from && to && date && clas && quota){
+          localStorage.setItem('from',from);
+          localStorage.setItem('to',to);
+          localStorage.setItem('date',date);
+          localStorage.setItem('clas',clas);
+          localStorage.setItem('quota',quota);
+          window.location.href = 'select_train.html';
+        }
+        else{
+          alert('Please fill out all feilds');
+        }
+      });
+      </script>
+  </body>
+</html>
