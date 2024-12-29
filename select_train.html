@@ -1,104 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!-- Meta tags for character encoding and responsive design -->
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-        <!-- Title of the webpage -->
-        <title>Select your train</title>
-    
-        <!-- Favicon for the page -->
-        <link rel="icon" type="image" href="icon.png" />
-    
-        <!-- Google Fonts (Montserrat and Roboto) for custom font styles -->
-        <link
-          href="https://fonts.googleapis.com/css?family=Montserrat"
-          rel="stylesheet"
-        />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-          rel="stylesheet"
-        />
-    
-        <!-- Linking the external CSS file -->
-        <link rel="stylesheet" href="styles.css" />
-    
-        <!-- Font Awesome for icons -->
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        />
+  <head>
+    <!-- Meta tags for character encoding and responsive design -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-      </head>
-<body>
+    <!-- Title of the webpage -->
+    <title>Select your train</title>
+
+    <!-- Favicon for the page -->
+    <link rel="icon" type="image" href="icon.png" />
+
+    <!-- Google Fonts (Montserrat and Roboto) for custom font styles -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Linking the external CSS file -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+  </head>
+  <body>
     <header>
-        <nav>
-          <!-- Menu button for mobile navigation (SVG icon) -->
-          <div class="menu_button">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="30"
-              height="30"
-              fill="currentColor"
-              class="bi_bi_list"
-              viewBox="0 0 16 16"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
-              />
-            </svg>
+      <nav>
+        <!-- Menu button for mobile navigation (SVG icon) -->
+        <div class="menu_button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="30"
+            height="30"
+            fill="currentColor"
+            class="bi_bi_list"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+            />
+          </svg>
+        </div>
+        <!-- IRCTC logo -->
+        <div class="train_logo">
+          <img src="irctc_logo.webp" alt="IRCTC Logo" />
+        </div>
+        <!-- Navigation links inside header -->
+        <div class="header_content">
+          <div class="nav_links">
+            <a href="#home">Meals</a>
+            <a href="#about">Track Your Train</a>
+            <a href="#services">PNR Status</a>
+            <a href="#contact">Charts/Vacancy</a>
           </div>
-          <!-- IRCTC logo -->
-          <div class="train_logo">
-            <img src="irctc_logo.webp" alt="IRCTC Logo" />
-          </div>
-          <!-- Navigation links inside header -->
-          <div class="header_content">
-            <div class="nav_links">
-              <a href="#home">Meals</a>
-              <a href="#about">Track Your Train</a>
-              <a href="#services">PNR Status</a>
-              <a href="#contact">Charts/Vacancy</a>
-            </div>
-          </div>
-          <!-- Login button -->
-          <button class="log">Login</button>
-        </nav>
-        <br />
-        <!-- <button>hi</button> -->
-      </header>  
-      <div class = form1 style="display: flex; flex-direction: row;">
-        <input class="from" id="from" placeholder="from"/>
-        <div class="icon-container" style="height: 40px;width: 40px;">
-            <!-- Hidden checkbox used to toggle the icon image -->
-            <input type="checkbox" style="display: none" id="toggleImage" />
-            <label for="toggleImage" class = "lbl">
-              <!-- Exchange icon -->
-              <img src="exchange.png" class="exchange" style="width: 40px;height: 40px;" />
-            </label>
-          </div>
-        <input class="to" id="to" placeholder="to"/>
-        <input class="date" id="date" placeholder="date"/>
-        <input class="class" id="class" placeholder="class"/>
-        <input class="quota" id="quota" placeholder="quota"/>
+        </div>
+        <!-- Login button -->
+        <button class="log">Login</button>
+      </nav>
+      <br />
+      <!-- <button>hi</button> -->
+    </header>
+    <div class="form1" style="display: flex; flex-direction: row">
+      <input class="fromst" id="fromst" placeholder="from" />
+      <div class="icon-container" style="height: 40px; width: 40px">
+        <!-- Hidden checkbox used to toggle the icon image -->
+        <input type="checkbox" style="display: none" id="toggleImage" />
+        <label for="toggleImage" class="lbl">
+          <!-- Exchange icon -->
+          <img
+            src="exchange.png"
+            class="exchange"
+            style="width: 30px; height: 30px; margin: 5px"
+          />
+        </label>
       </div>
-  <script>  
-    // Retrieve data from localStorage
-    const from = localStorage.getItem('from');
-    const to = localStorage.getItem('to');
-    const date = localStorage.getItem('date');
-    const clas = localStorage.getItem('clas');
-    const quota = localStorage.getItem('quota');
-    // Display data in the HTML
-    document.getElementById('display-from').textContent = from || 'Not provided';
-    document.getElementById('display-to').textContent = to || 'Not provided';
-    document.getElementById('display-date').textContent = date || 'Not provided';
-    document.getElementById('display-class').textContent = clas || 'Not provided';
-    document.getElementById('display-quota').textContent = quota || 'Not provided';
-  </script>
-</body>
+      <input class="to" id="to" placeholder="to" />
+      <input class="date" id="date" placeholder="date" />
+      <input class="class" id="class" placeholder="class" />
+      <input class="quota" id="quota" placeholder="quota" />
+    </div>
+    <script>
+      // Retrieve data from localStorage
+      const from = localStorage.getItem("from");
+      const to = localStorage.getItem("to");
+      const date = localStorage.getItem("date");
+      const clas = localStorage.getItem("clas");
+      const quota = localStorage.getItem("quota");
+      // Display data in the HTML
+      if (from) {
+        document.getElementById("fromst").value = from;
+      }
+      if (to) {
+        document.getElementById("to").value = to;
+      }
+      if (date) {
+        document.getElementById("date").value = date;
+      }
+      if (clas) {
+        document.getElementById("class").value = clas;
+      }
+      if (quota) {
+        document.getElementById("quota").value = quota;
+      }
+    </script>
+  </body>
 </html>
