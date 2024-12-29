@@ -88,6 +88,8 @@
       <input class="date" id="date" placeholder="date" />
       <input class="class" id="class" placeholder="class" />
       <input class="quota" id="quota" placeholder="quota" />
+      <!-- <button/> -->
+       <div id = "train_no"></div>
     </div>
     <script>
       // Retrieve data from localStorage
@@ -112,6 +114,27 @@
       if (quota) {
         document.getElementById("quota").value = quota;
       }
+      document.getElementById('fromst').addEventListener('submit', function(e) {
+      e.preventDefault();  // Prevent the default form submission (reloading the page).
+
+      const name = document.getElementById('nameInput').value;  // Get the value from the input field.
+
+      // Send a POST request to the server with the entered name.
+      fetch('http://localhost:3000/search', {
+        method: 'POST',  // The HTTP method is POST.
+        headers: {
+          'Content-Type': 'application/json'  // The request body is JSON.
+        },
+        body: JSON.stringify({ name })  // Send the entered name as JSON in the request body.
+      })
+      .then(response => response.json())  // Parse the JSON response.
+      .then(data => {
+        document.getElementById('response').textContent = data.message;  // Display the server's response.
+      })
+      .catch(error => {
+        document.getElementById('response').textContent = 'Error occurred!';  // Handle errors.
+      });
+    });
     </script>
   </body>
 </html>
