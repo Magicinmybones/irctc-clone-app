@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Train Selection</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    .data-container {
+      border: 1px solid #ddd;
+      padding: 15px;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+      max-width: 400px;
+      margin: auto;
+    }
+    .data-container h2 {
+      text-align: center;
+      color: #333;
+    }
+    .data-item {
+      margin: 10px 0;
+    }
+    .data-label {
+      font-weight: bold;
+    }
+    .back-button {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+    }
+    .back-button a {
+      text-decoration: none;
+      color: #fff;
+      background-color: #007bff;
+      padding: 10px 15px;
+      border-radius: 5px;
+    }
+    .back-button a:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="data-container">
+    <h2>Your Train Details</h2>
+    <div class="data-item">
+      <span class="data-label">From:</span>
+      <span id="display-from"></span>
+    </div>
+    <div class="data-item">
+      <span class="data-label">To:</span>
+      <span id="display-to"></span>
+    </div>
+    <div class="data-item">
+      <span class="data-label">Date:</span>
+      <span id="display-date"></span>
+    </div>
+    <div class="data-item">
+      <span class="data-label">Class:</span>
+      <span id="display-class"></span>
+    </div>
+    <div class="data-item">
+      <span class="data-label">Quota:</span>
+      <span id="display-quota"></span>
+    </div>
+    <div class="back-button">
+      <a href="index.html">Go Back</a>
+    </div>
+  </div>
+
+  <script>
+    // Retrieve data from localStorage
+    const from = localStorage.getItem('from');
+    const to = localStorage.getItem('to');
+    const date = localStorage.getItem('date');
+    const clas = localStorage.getItem('clas');
+    const quota = localStorage.getItem('quota');
+    // Display data in the HTML
+    document.getElementById('display-from').textContent = from || 'Not provided';
+    document.getElementById('display-to').textContent = to || 'Not provided';
+    document.getElementById('display-date').textContent = date || 'Not provided';
+    document.getElementById('display-class').textContent = clas || 'Not provided';
+    document.getElementById('display-quota').textContent = quota || 'Not provided';
+  </script>
+</body>
+</html>

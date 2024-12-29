@@ -1,0 +1,266 @@
+/* Reset margins and padding for all elements */
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+/* Set the background color for the body */
+body {
+  background-color: #f7f7f7;
+}
+
+/* Remove border from all input elements */
+input {
+  border-style: none;
+}
+
+/* Styling for the header section */
+header {
+  background-color: #f7f7f7;
+  padding: 10px 20px 0px 20px;
+  text-align: left;
+}
+
+/* Styling for header's main title (h1) */
+header h1 {
+  color: #2686e7;
+  font-size: 36px;
+  margin: 0;
+}
+
+/* Navigation bar styles */
+nav {
+  display: flex;
+  align-items: center;
+}
+
+/* Styling for the train logo */
+nav .train_logo {
+  height: 50px;
+  width: 50px;
+  margin-right: 20px;
+  margin-left: 30px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+/* Ensures the logo image fills the container and maintains aspect ratio */
+nav .train_logo img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Centered header content */
+nav .header_content {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+}
+
+/* Styling for navigation links */
+nav a {
+  font-family: "roboto";
+  font-weight: 500;
+  color: #3939a3;
+  text-decoration: none;
+  margin-right: 40px;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect for navigation links */
+nav a:hover {
+  color: #fc4100;
+}
+
+/* Styling for the login button */
+.log {
+  background-color: #fc4100;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  border: 0;
+  border-radius: 4px;
+  font-weight: 600;
+  margin: 0 10px;
+  width: 80px;
+  padding: 10px 0;
+  box-shadow: 0 0 20px rgba(104, 85, 224, 0.2);
+  transition: 0.4s;
+}
+
+/* Specific color for the "bi_bi_list" class */
+.bi_bi_list {
+  color: #fc4100;
+}
+
+/* Styling for menu button hover effect */
+.menu_button :hover {
+  color: #3939a3;
+}
+
+/* Hover effect for the login button */
+.log:hover {
+  color: white;
+  box-shadow: 0 0 10px #ffffff;
+  background-color: #e43900;
+}
+
+/* Main page section styling */
+.mainpage {
+  overflow: hidden;
+  display: flex;
+  width: 100%;
+  height: 600px;
+  position: relative;
+  align-items: center;
+}
+
+/* Search box container styling */
+.searchbox {
+  border: solid 1.5px #3939a3;
+  border-radius: 2%;
+  width: 500px;
+  height: 500px;
+  margin-left: auto;
+  margin-right: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: #ffffff;
+}
+
+/* Book title styling */
+.bookt {
+  margin-top: 20px;
+  color: #3939a3;
+  font-size: 33px;
+  font-family: sans-serif;
+  font-weight: 550;
+  text-align: center;
+  width: 100%;
+}
+
+/* Form container styling */
+.forms {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Styling for the first form */
+.form1 {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Styling for the second form */
+.form2 {
+  width: 40%;
+  padding: 0px 0px 0px 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Video background styling */
+video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover; /* Ensures the video covers the container */
+  filter: grayscale(100%); /* Makes the video black and white */
+}
+
+/* Styling for input elements inside form2 */
+.form2 input {
+  width: 100%;
+  height: 40px;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+  border: solid 1px #a0a0a0;
+  border-radius: 2px;
+}
+
+/* Styling for input elements inside form1 */
+.form1 input {
+  width: 100%;
+  height: 40px;
+  box-sizing: border-box;
+  border: solid 1px #a0a0a0;
+  border-radius: 2px;
+}
+
+/* Margin adjustment for formq1 class */
+.formq1 {
+  margin-bottom: 0px;
+}
+
+/* Icon container styling */
+.icon-container {
+  align-self: center;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 100%;
+}
+
+/* Styling for images inside icon containers */
+.icon-container img {
+  border-radius: 50%;
+  width: 90%;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Hover effect for images inside icon containers */
+.icon-container img:hover {
+  width: 80%;
+  border: solid 1px #3939a3;
+}
+
+/* Styling for the exchange toggle checkbox */
+#toggleImage:checked + label .exchange {
+  border-radius: 50%;
+  width: 80%;
+  transform: rotate(180deg);
+}
+
+/* Focus effect for input fields */
+.forms input:focus {
+  outline: none;
+  border: solid 1.8px #3939a3;
+  border-radius: 2px;
+}
+.formq11 {
+  margin-bottom: 30px;
+}
+#quota-select {
+  height: 40px;
+  background-color: #ffffff;
+  box-shadow: none;
+  box-shadow: none;
+  border: #3939a3;
+  border-width: 10px;
+  outline: #3939a3;
+  outline-width: 10px;
+  border: 1.5px solid #3939a3;
+  border-radius: 4px;
+}
+.icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.lbl {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
